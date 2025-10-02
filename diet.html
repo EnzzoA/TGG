@@ -1,0 +1,256 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TGG - Dieta</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://unpkg.com/feather-icons"></script>
+</head>
+<body class="bg-gray-50 min-h-screen">
+    <!-- Navigation -->
+    <nav class="bg-indigo-600 text-white shadow-lg">
+        <div class="max-w-6xl mx-auto px-4">
+            <div class="flex justify-between items-center py-4">
+                <div class="flex items-center space-x-4">
+                    <i data-feather="award" class="w-8 h-8"></i>
+                    <span class="font-bold text-xl">TGG</span>
+                </div>
+                <div class="hidden md:flex space-x-8">
+                    <a href="index.html" class="flex items-center space-x-1">
+                        <i data-feather="home"></i>
+                        <span>Home</span>
+                    </a>
+                    <a href="competition.html" class="flex items-center space-x-1">
+                        <i data-feather="activity"></i>
+                        <span>Competição</span>
+                    </a>
+                    <a href="diet.html" class="flex items-center space-x-1 text-white font-medium">
+                        <i data-feather="heart"></i>
+                        <span>Dieta</span>
+                    </a>
+                    <a href="friends.html" class="flex items-center space-x-1">
+                        <i data-feather="users"></i>
+                        <span>Amigos</span>
+                    </a>
+                    <a href="settings.html" class="flex items-center space-x-1">
+                        <i data-feather="settings"></i>
+                        <span>Configurações</span>
+                    </a>
+                </div>
+                <div class="md:hidden">
+                    <button id="menu-toggle" class="focus:outline-none">
+                        <i data-feather="menu"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+        <!-- Mobile menu -->
+        <div id="mobile-menu" class="hidden px-4 pb-4 md:hidden">
+            <a href="index.html" class="block py-2 px-4 rounded hover:bg-indigo-500">Home</a>
+            <a href="competition.html" class="block py-2 px-4 rounded hover:bg-indigo-500">Competição</a>
+            <a href="diet.html" class="block py-2 px-4 rounded hover:bg-indigo-500">Dieta</a>
+            <a href="friends.html" class="block py-2 px-4 rounded hover:bg-indigo-500">Amigos</a>
+            <a href="settings.html" class="block py-2 px-4 rounded hover:bg-indigo-500">Configurações</a>
+        </div>
+    </nav>
+
+    <!-- Main Content -->
+    <main class="max-w-6xl mx-auto px-4 py-8">
+        <div class="flex justify-between items-center mb-8">
+            <h1 class="text-3xl font-bold">Dieta</h1>
+            <div class="flex space-x-2">
+                <button class="bg-indigo-600 hover:bg-indigo-700 text-white px-4 py-2 rounded-lg flex items-center">
+                    <i data-feather="plus" class="mr-2"></i>
+                    Adicionar refeição
+                </button>
+                <button class="border border-indigo-600 text-indigo-600 hover:bg-indigo-50 px-4 py-2 rounded-lg flex items-center">
+                    <i data-feather="calendar" class="mr-2"></i>
+                    Relatório semanal
+                </button>
+            </div>
+        </div>
+        
+        <!-- Nutrition Summary -->
+        <section class="bg-white rounded-xl shadow-md p-6 mb-8">
+            <h2 class="text-xl font-bold mb-4">Relatório do dia</h2>
+            <div class="grid grid-cols-2 md:grid-cols-4 gap-4">
+                <div class="border-r pr-4">
+                    <div class="flex items-center mb-1">
+                        <div class="bg-red-100 p-2 rounded-full mr-2">
+                            <i data-feather="zap" class="text-red-500"></i>
+                        </div>
+                        <span class="font-medium">Calorias</span>
+                    </div>
+                    <div class="flex justify-between items-end">
+                        <span class="text-2xl font-bold">1,450</span>
+                        <span class="text-gray-500 text-sm">/2,000</span>
+                    </div>
+                    <div class="w-full bg-gray-200 rounded-full h-1.5 mt-2">
+                        <div class="bg-red-500 h-1.5 rounded-full" style="width: 72.5%"></div>
+                    </div>
+                </div>
+                <div class="border-r pr-4">
+                    <div class="flex items-center mb-1">
+                        <div class="bg-green-100 p-2 rounded-full mr-2">
+                            <i data-feather="box" class="text-green-500"></i>
+                        </div>
+                        <span class="font-medium">Proteínas</span>
+                    </div>
+                    <div class="flex justify-between items-end">
+                        <span class="text-2xl font-bold">85g</span>
+                        <span class="text-gray-500 text-sm">/120g</span>
+                    </div>
+                    <div class="w-full bg-gray-200 rounded-full h-1.5 mt-2">
+                        <div class="bg-green-500 h-1.5 rounded-full" style="width: 70.8%"></div>
+                    </div>
+                </div>
+                <div class="border-r pr-4">
+                    <div class="flex items-center mb-1">
+                        <div class="bg-yellow-100 p-2 rounded-full mr-2">
+                            <i data-feather="droplet" class="text-yellow-500"></i>
+                        </div>
+                        <span class="font-medium">Carboidratos</span>
+                    </div>
+                    <div class="flex justify-between items-end">
+                        <span class="text-2xl font-bold">145g</span>
+                        <span class="text-gray-500 text-sm">/200g</span>
+                    </div>
+                    <div class="w-full bg-gray-200 rounded-full h-1.5 mt-2">
+                        <div class="bg-yellow-500 h-1.5 rounded-full" style="width: 72.5%"></div>
+                    </div>
+                </div>
+                <div>
+                    <div class="flex items-center mb-1">
+                        <div class="bg-blue-100 p-2 rounded-full mr-2">
+                            <i data-feather="wind" class="text-blue-500"></i>
+                        </div>
+                        <span class="font-medium">Gordura</span>
+                    </div>
+                    <div class="flex justify-between items-end">
+                        <span class="text-2xl font-bold">45g</span>
+                        <span class="text-gray-500 text-sm">/65g</span>
+                    </div>
+                    <div class="w-full bg-gray-200 rounded-full h-1.5 mt-2">
+                        <div class="bg-blue-500 h-1.5 rounded-full" style="width: 69.2%"></div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        <!-- Meal Plan -->
+        <section class="bg-white rounded-xl shadow-md p-6">
+            <div class="flex justify-between items-center mb-6">
+                <h2 class="text-xl font-bold">Refeições de hoje</h2>
+                <div class="flex items-center space-x-2">
+                    <button class="p-1 rounded-full hover:bg-gray-100">
+                        <i data-feather="chevron-left"></i>
+                    </button>
+                    <span class="font-medium">Dom, Jun 6</span>
+                    <button class="p-1 rounded-full hover:bg-gray-100">
+                        <i data-feather="chevron-right"></i>
+                    </button>
+                </div>
+            </div>
+            
+            <div class="space-y-6">
+                <!-- Breakfast -->
+                <div class="border rounded-lg p-4">
+                    <div class="flex justify-between items-center mb-3">
+                        <h3 class="font-semibold text-lg">Café da manhã</h3>
+                        <span class="text-sm text-gray-500">8:00 AM</span>
+                    </div>
+                    <div class="space-y-2">
+                        <div class="flex justify-between items-center">
+                            <div class="flex items-center">
+                                <input type="checkbox" id="meal1" class="w-5 h-5 text-green-600 rounded focus:ring-green-500" checked>
+                                <label for="meal1" class="ml-2">Iogurte com frutas vermelhas </label>
+                            </div>
+                            <span class="text-sm text-gray-600">320 kcal</span>
+                        </div>
+                        <div class="flex justify-between items-center">
+                            <div class="flex items-center">
+                                <input type="checkbox" id="meal2" class="w-5 h-5 text-green-600 rounded focus:ring-green-500" checked>
+                                <label for="meal2" class="ml-2">Torrada com abacate</label>
+                            </div>
+                            <span class="text-sm text-gray-600">280 kcal</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Lunch -->
+                <div class="border rounded-lg p-4">
+                    <div class="flex justify-between items-center mb-3">
+                        <h3 class="font-semibold text-lg">Almoço</h3>
+                        <span class="text-sm text-gray-500">1:00 PM</span>
+                    </div>
+                    <div class="space-y-2">
+                        <div class="flex justify-between items-center">
+                            <div class="flex items-center">
+                                <input type="checkbox" id="meal3" class="w-5 h-5 text-green-600 rounded focus:ring-green-500">
+                                <label for="meal3" class="ml-2">Salada com frango grelhado
+                            </div>
+                            <span class="text-sm text-gray-600">450 kcal</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Snack -->
+                <div class="border rounded-lg p-4">
+                    <div class="flex justify-between items-center mb-3">
+                        <h3 class="font-semibold text-lg">Café da tarde</h3>
+                        <span class="text-sm text-gray-500">4:00 PM</span>
+                    </div>
+                    <div class="space-y-2">
+                        <div class="flex justify-between items-center">
+                            <div class="flex items-center">
+                                <input type="checkbox" id="meal5" class="w-5 h-5 text-green-600 rounded focus:ring-green-500">
+                                <label for="meal5" class="ml-2">Shake de proteína</label>
+                            </div>
+                            <span class="text-sm text-gray-600">180 kcal</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Dinner -->
+                <div class="border rounded-lg p-4">
+                    <div class="flex justify-between items-center mb-3">
+                        <h3 class="font-semibold text-lg">Jantar</h3>
+                        <span class="text-sm text-gray-500">7:30 PM</span>
+                    </div>
+                    <div class="space-y-2">
+                        <div class="flex justify-between items-center">
+                            <div class="flex items-center">
+                                <input type="checkbox" id="meal6" class="w-5 h-5 text-green-600 rounded focus:ring-green-500">
+                                <label for="meal6" class="ml-2">Salmão com vegetais</label>
+                            </div>
+                            <span class="text-sm text-gray-600">520 kcal</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="mt-6">
+                <h3 class="font-semibold mb-2">Litro de água</h3>
+                <div class="flex items-center space-x-4">
+                    <div class="flex-1 bg-gray-200 rounded-full h-2.5">
+                        <div class="bg-blue-500 h-2.5 rounded-full" style="width: 60%"></div>
+                    </div>
+                    <span class="text-sm font-medium">3/5 litros</span>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <script>
+        // Initialize Feather Icons
+        feather.replace();
+        
+        // Mobile menu toggle
+        document.getElementById('menu-toggle').addEventListener('click', function() {
+            const menu = document.getElementById('mobile-menu');
+            menu.classList.toggle('hidden');
+        });
+    </script>
+</body>
+</html>
